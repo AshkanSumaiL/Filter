@@ -4,22 +4,13 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class FileInput {
-    public String getType() {
-        return type;
+    public String getContent() {
+        return content;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    private String type;
-    private String data;
-
+    String content;
 
     public FileInput(String target) throws IOException {
         readFile(target);
@@ -33,17 +24,8 @@ public class FileInput {
         while ((line = br.readLine()) != null) {
             text.append(line);
         }
-
-        type = text.toString().substring(0, text.toString().indexOf(" "));
-        data = text.toString().substring(text.toString().indexOf(" ") + 1);
-
-        System.out.println(type);
-        System.out.println(data);
-    }
-
-    public List<String> getData() {
-        String[] array = data.split(" ");
-        return new ArrayList<String>(Arrays.asList(array));
+        content = text.toString();
+        System.out.println(content);
     }
 
 }

@@ -1,18 +1,36 @@
 package com.company.commands.filter;
 
+import com.company.commands.Constants;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class WordFilter {
-    public static List<String> palindrome(List<String> words) {
-        List<String> palindromeWords = new ArrayList<String>();
-        for (String word : words) {
-            if (isPalindrome(word)) {
-                palindromeWords.add(word);
-            }
+
+    public static List<String> filter(String filterParam, List<String> data) {
+        if (filterParam.equals(Constants.WORD_FILTER.PALINDROME.toString())) {
+            return palindrome(data);
         }
-        return palindromeWords;
+        if (filterParam.equals(Constants.WORD_FILTER.ALL_VOWELS.toString())) {
+            return allVowels(data);
+        }
+        if (filterParam.equals(Constants.WORD_FILTER.DIPHTHONG.toString())) {
+            return diphthong(data);
+        }
+        if (filterParam.equals(Constants.WORD_FILTER.TRIPHTHONG.toString())) {
+            return triphthong(data);
+        } else {
+            System.out.println("FILTER NOT FOUND");
+            return new ArrayList<>();
+        }
+    }
+
+    public static List<String> palindrome(List<String> words) {
+        return  words.stream()
+                .filter(WordFilter::isPalindrome)
+                .collect(Collectors.toList());
     }
 
     private static boolean isPalindrome(String word) {
@@ -21,13 +39,9 @@ public class WordFilter {
     }
 
     public static List<String> allVowels(List<String> words) {
-        List<String> allVowelsWords = new ArrayList<String>();
-        for (String word : words) {
-            if (hasAllVowels(word)) {
-                allVowelsWords.add(word);
-            }
-        }
-        return allVowelsWords;
+        return  words.stream()
+                .filter(WordFilter::hasAllVowels)
+                .collect(Collectors.toList());
     }
 
     private static boolean hasAllVowels(String word) {
@@ -37,13 +51,9 @@ public class WordFilter {
     }
 
     public static List<String> diphthong(List<String> words) {
-        List<String> diphthongWords = new ArrayList();
-        for (String word : words) {
-            if (isDiphthong(word)) {
-                diphthongWords.add(word);
-            }
-        }
-        return diphthongWords;
+        return  words.stream()
+                .filter(WordFilter::isDiphthong)
+                .collect(Collectors.toList());
     }
 
     private static boolean isDiphthong(String word) {
@@ -57,13 +67,9 @@ public class WordFilter {
     }
 
     public static List<String> triphthong(List<String> words) {
-        List<String> triphthongWords = new ArrayList();
-        for (String word : words) {
-            if (isTriphthong(word)) {
-                triphthongWords.add(word);
-            }
-        }
-        return triphthongWords;
+        return  words.stream()
+                .filter(WordFilter::isTriphthong)
+                .collect(Collectors.toList());
     }
 
     private static boolean isTriphthong(String word) {

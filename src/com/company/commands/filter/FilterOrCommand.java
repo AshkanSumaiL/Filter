@@ -5,22 +5,18 @@ import java.util.Arrays;
 import java.util.List;
 
 public class FilterOrCommand extends FilterCommand {
-
-    public FilterOrCommand(String type, String params, List<String> data) {
-        super(type, params, data);
-        execute();
+    public FilterOrCommand(String name, String description) {
+        super(name, description);
     }
 
     @Override
     public void execute() {
-        List<String> paramsList = new ArrayList<String>(Arrays.asList(params.split(" ")));
+        List<String> paramsList = new ArrayList<String>(Arrays.asList(filterParam.split(" ")));
         List<String> temp;
         List<String> result = new ArrayList<String>();
 
-        for (String param : paramsList) {
-            FilterCommand filterCommand = new FilterCommand(type, param, super.data);
-            temp = filterCommand.filter();
-
+        for (String filterParam : paramsList) {
+            temp = Filterer.filter(data, filterParam);
             for (String num : temp) {
                 if (!result.contains(num)) {
                     result.add(num);
