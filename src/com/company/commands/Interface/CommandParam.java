@@ -1,11 +1,9 @@
 package com.company.commands.Interface;
 
-public abstract class CommandParam extends Command {
-    public String getParams() {
-        return params;
-    }
+import java.io.IOException;
 
-    public void setParams(String params) {
+public abstract class CommandParam extends Command {
+    public void setParams(String params) throws IOException {
         this.params = params;
     }
 

@@ -30,9 +30,10 @@ public class Data {
         String[] array = elements.split(" ");
         info = new ArrayList<String>(Arrays.asList(array));
     }
-    public Data(Data data){
-        type=data.type;
-        info=data.info;
+
+    public Data(Data data) {
+        type = data.type;
+        info = data.info;
     }
 
 }

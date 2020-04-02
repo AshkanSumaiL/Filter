@@ -3,8 +3,8 @@ package com.company.commands.filter;
 import com.company.commands.Interface.CommandParam;
 
 public class FilterCommand extends CommandParam {
-    Data data;
-    String filterParam;
+    protected Data data;
+    protected String filterParam;
 
     public FilterCommand(String name, String description) {
         super(name, description);

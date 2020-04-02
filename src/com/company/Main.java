@@ -2,10 +2,9 @@ package com.company;
 
 import com.company.commands.CommandList;
 import com.company.commands.Interface.Command;
+import com.company.commands.Interface.CommandParam;
 import com.company.commands.filter.Data;
-import com.company.commands.filter.FilterAndCommand;
 import com.company.commands.filter.FilterCommand;
-import com.company.commands.filter.FilterOrCommand;
 import com.company.commands.load.LoadCommand;
 import com.company.commands.other.HelpCommand;
 
@@ -24,21 +23,14 @@ public class Main {
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             String line = reader.readLine();
             currentCommand = commandList.findCommand(line);
-            if (currentCommand instanceof LoadCommand) {
-                ((LoadCommand) currentCommand).setTarget(line.substring(line.indexOf(" ") + 1));
-                data = new Data(((LoadCommand) currentCommand).getContent());
-            }
-            if (currentCommand instanceof FilterCommand) {
-                ((FilterCommand) currentCommand).setData(data);
-                ((FilterCommand) currentCommand).setParams(line.substring(line.indexOf(" ") + 1));
-            }
-            if (currentCommand instanceof FilterAndCommand) {
-                ((FilterAndCommand) currentCommand).setData(data);
-                ((FilterAndCommand) currentCommand).setParams(line.substring(line.indexOf(" ") + 1));
-            }
-            if (currentCommand instanceof FilterOrCommand) {
-                ((FilterOrCommand) currentCommand).setData(data);
-                ((FilterOrCommand) currentCommand).setParams(line.substring(line.indexOf(" ") + 1));
+            if (currentCommand instanceof LoadCommand || currentCommand instanceof FilterCommand) {
+                ((CommandParam) currentCommand).setParams(line.substring(line.indexOf(" ") + 1));
+                if (currentCommand instanceof LoadCommand) {
+                    data = new Data(((LoadCommand) currentCommand).getContent());
+                }
+                if (currentCommand instanceof FilterCommand) {
+                    ((FilterCommand) currentCommand).setData(data);
+                }
             }
             if (currentCommand instanceof HelpCommand) {
                 ((HelpCommand) currentCommand).setCommands(commandList.getCommands());

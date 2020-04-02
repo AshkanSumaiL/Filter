@@ -6,16 +6,14 @@ import java.io.IOException;
 
 public class LoadCommand extends CommandParam {
     FileInput fileInput;
-
-    public void setTarget(String target) throws IOException {
-        this.target = target;
-        fileInput = new FileInput(target);
-    }
-
     String target;
 
     public LoadCommand(String name, String description) {
         super(name, description);
+    }
+
+    @Override
+    public void execute() throws IOException {
     }
 
     public FileInput getFileInput() {
@@ -24,7 +22,9 @@ public class LoadCommand extends CommandParam {
 
 
     @Override
-    public void execute() throws IOException {
+    public void setParams(String target) throws IOException {
+        this.target = target;
+        fileInput = new FileInput(target);
     }
 
     public String getContent() {

@@ -28,7 +28,7 @@ public class WordFilter {
     }
 
     public static List<String> palindrome(List<String> words) {
-        return  words.stream()
+        return words.stream()
                 .filter(WordFilter::isPalindrome)
                 .collect(Collectors.toList());
     }
@@ -39,7 +39,7 @@ public class WordFilter {
     }
 
     public static List<String> allVowels(List<String> words) {
-        return  words.stream()
+        return words.stream()
                 .filter(WordFilter::hasAllVowels)
                 .collect(Collectors.toList());
     }
@@ -51,7 +51,7 @@ public class WordFilter {
     }
 
     public static List<String> diphthong(List<String> words) {
-        return  words.stream()
+        return words.stream()
                 .filter(WordFilter::isDiphthong)
                 .collect(Collectors.toList());
     }
@@ -67,7 +67,7 @@ public class WordFilter {
     }
 
     public static List<String> triphthong(List<String> words) {
-        return  words.stream()
+        return words.stream()
                 .filter(WordFilter::isTriphthong)
                 .collect(Collectors.toList());
     }

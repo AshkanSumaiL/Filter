@@ -2,30 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b701f07f-1cff-44bd-ab03-f1736e31f24f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/commands/CommandList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/commands/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/commands/Interface/CommandParam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/commands/filter/Data.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/commands/filter/Filterer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/commands/other/ExitCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/commands/other/HelpCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/patterns_p0/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patterns_p0/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/patterns_p0/com/company/commands/filter/FilterAndCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patterns_p0/com/company/commands/filter/FilterAndCommand.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/patterns_p0/com/company/commands/filter/FilterCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patterns_p0/com/company/commands/filter/FilterCommand.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/patterns_p0/com/company/commands/filter/FilterOrCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patterns_p0/com/company/commands/filter/FilterOrCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/patterns_p0/com/company/commands/filter/NumberFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patterns_p0/com/company/commands/filter/NumberFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/patterns_p0/com/company/commands/filter/WordFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patterns_p0/com/company/commands/filter/WordFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/patterns_p0/com/company/commands/load/FileInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patterns_p0/com/company/commands/load/FileInput.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/patterns_p0/com/company/commands/filter/Filterer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patterns_p0/com/company/commands/filter/Filterer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/patterns_p0/com/company/commands/load/LoadCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/patterns_p0/com/company/commands/load/LoadCommand.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/commands/Interface/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/commands/Interface/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/commands/Interface/CommandParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/commands/Interface/CommandParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/commands/filter/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/commands/filter/Data.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/commands/filter/FilterAndCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/commands/filter/FilterAndCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/commands/filter/FilterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/commands/filter/FilterCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/commands/filter/FilterOrCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/commands/filter/FilterOrCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/commands/filter/Filterer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/commands/filter/Filterer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/commands/filter/NumberFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/commands/filter/NumberFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/commands/filter/WordFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/commands/filter/WordFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/commands/load/FileInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/commands/load/FileInput.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/commands/load/LoadCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/commands/load/LoadCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,6 +46,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -119,7 +112,7 @@
       <option name="presentableId" value="Default" />
       <updated>1585584893064</updated>
       <workItem from="1585584898701" duration="34652000" />
-      <workItem from="1585681226766" duration="25334000" />
+      <workItem from="1585681226766" duration="32889000" />
     </task>
     <servers />
   </component>
@@ -127,10 +120,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="421" y="36" width="374" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1585750564765">
+    <state x="421" y="36" width="374" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1585839563377">
       <screen x="67" y="25" width="1093" height="587" />
     </state>
-    <state x="421" y="36" width="374" height="562" key="#com.intellij.ide.util.MemberChooser/67.25.1093.587@67.25.1093.587" timestamp="1585750564765" />
+    <state x="421" y="36" width="374" height="562" key="#com.intellij.ide.util.MemberChooser/67.25.1093.587@67.25.1093.587" timestamp="1585839563377" />
     <state x="317" y="25" width="573" height="587" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585692217205">
       <screen x="67" y="25" width="1093" height="587" />
     </state>
@@ -143,26 +136,30 @@
       <screen x="67" y="25" width="1093" height="587" />
     </state>
     <state x="396" y="75" width="424" height="484" key="FileChooserDialogImpl/67.25.1093.587@67.25.1093.587" timestamp="1585659905424" />
-    <state width="1051" height="151" key="GridCell.Tab.0.bottom" timestamp="1585753205501">
+    <state width="1051" height="151" key="GridCell.Tab.0.bottom" timestamp="1585842636448">
       <screen x="67" y="25" width="1093" height="587" />
     </state>
-    <state width="1051" height="151" key="GridCell.Tab.0.bottom/67.25.1093.587@67.25.1093.587" timestamp="1585753205501" />
+    <state width="1051" height="151" key="GridCell.Tab.0.bottom/67.25.1093.587@67.25.1093.587" timestamp="1585842636448" />
     <state width="1055" height="193" key="GridCell.Tab.0.bottom/67.25.1097.591@67.25.1097.591" timestamp="1585586313227" />
-    <state width="1051" height="151" key="GridCell.Tab.0.center" timestamp="1585753205496">
+    <state width="1051" height="151" key="GridCell.Tab.0.center" timestamp="1585842636446">
       <screen x="67" y="25" width="1093" height="587" />
     </state>
-    <state width="1051" height="151" key="GridCell.Tab.0.center/67.25.1093.587@67.25.1093.587" timestamp="1585753205496" />
+    <state width="1051" height="151" key="GridCell.Tab.0.center/67.25.1093.587@67.25.1093.587" timestamp="1585842636446" />
     <state width="1055" height="193" key="GridCell.Tab.0.center/67.25.1097.591@67.25.1097.591" timestamp="1585586313224" />
-    <state width="1051" height="151" key="GridCell.Tab.0.left" timestamp="1585753205496">
+    <state width="1051" height="151" key="GridCell.Tab.0.left" timestamp="1585842636445">
       <screen x="67" y="25" width="1093" height="587" />
     </state>
-    <state width="1051" height="151" key="GridCell.Tab.0.left/67.25.1093.587@67.25.1093.587" timestamp="1585753205496" />
+    <state width="1051" height="151" key="GridCell.Tab.0.left/67.25.1093.587@67.25.1093.587" timestamp="1585842636445" />
     <state width="1055" height="193" key="GridCell.Tab.0.left/67.25.1097.591@67.25.1097.591" timestamp="1585586313223" />
-    <state width="1051" height="151" key="GridCell.Tab.0.right" timestamp="1585753205497">
+    <state width="1051" height="151" key="GridCell.Tab.0.right" timestamp="1585842636448">
       <screen x="67" y="25" width="1093" height="587" />
     </state>
-    <state width="1051" height="151" key="GridCell.Tab.0.right/67.25.1093.587@67.25.1093.587" timestamp="1585753205497" />
+    <state width="1051" height="151" key="GridCell.Tab.0.right/67.25.1093.587@67.25.1093.587" timestamp="1585842636448" />
     <state width="1055" height="193" key="GridCell.Tab.0.right/67.25.1097.591@67.25.1097.591" timestamp="1585586313226" />
+    <state x="349" y="117" width="524" height="459" key="extract.method.dialog" timestamp="1585842438031">
+      <screen x="67" y="25" width="1093" height="587" />
+    </state>
+    <state x="349" y="117" width="524" height="459" key="extract.method.dialog/67.25.1093.587@67.25.1093.587" timestamp="1585842438031" />
     <state x="276" y="24" width="672" height="678" key="search.everywhere.popup" timestamp="1585672081857">
       <screen x="67" y="25" width="1093" height="587" />
     </state>

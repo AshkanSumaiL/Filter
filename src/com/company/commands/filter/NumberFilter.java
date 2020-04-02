@@ -32,37 +32,37 @@ public class NumberFilter {
     }
 
     private static List<String> even(List<String> numbers) {
-        return  numbers.stream()
+        return numbers.stream()
                 .filter(number -> isEven(Integer.parseInt(number)))
                 .collect(Collectors.toList());
     }
 
     private static List<String> odd(List<String> numbers) {
-        return  numbers.stream()
+        return numbers.stream()
                 .filter(number -> isOdd(Integer.parseInt(number)))
                 .collect(Collectors.toList());
     }
 
     private static List<String> prime(List<String> numbers) {
-        return  numbers.stream()
+        return numbers.stream()
                 .filter(number -> isPrime(Integer.parseInt(number)))
                 .collect(Collectors.toList());
     }
 
     private static List<String> palindrome(List<String> numbers) {
-        return  numbers.stream()
+        return numbers.stream()
                 .filter(number -> isPalindrome(Integer.parseInt(number)))
                 .collect(Collectors.toList());
     }
 
     private static List<String> multipleOf7(List<String> numbers) {
-        return  numbers.stream()
+        return numbers.stream()
                 .filter(number -> isMultipleOf7(Integer.parseInt(number)))
                 .collect(Collectors.toList());
     }
 
     private static List<String> multipleOf11(List<String> numbers) {
-        return  numbers.stream()
+        return numbers.stream()
                 .filter(number -> isMultipleOf11(Integer.parseInt(number)))
                 .collect(Collectors.toList());
     }
