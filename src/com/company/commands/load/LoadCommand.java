@@ -1,10 +1,10 @@
 package com.company.commands.load;
 
-import com.company.commands.Interface.CommandParam;
+import com.company.commands.Interface.ParametrizedCommand;
 
 import java.io.IOException;
 
-public class LoadCommand extends CommandParam {
+public class LoadCommand extends ParametrizedCommand {
     FileInput fileInput;
     String target;
 

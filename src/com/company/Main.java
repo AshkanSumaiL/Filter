@@ -2,7 +2,7 @@ package com.company;
 
 import com.company.commands.CommandList;
 import com.company.commands.Interface.Command;
-import com.company.commands.Interface.CommandParam;
+import com.company.commands.Interface.ParametrizedCommand;
 import com.company.commands.filter.Data;
 import com.company.commands.filter.FilterCommand;
 import com.company.commands.load.LoadCommand;
@@ -24,7 +24,7 @@ public class Main {
             String line = reader.readLine();
             currentCommand = commandList.findCommand(line);
             if (currentCommand instanceof LoadCommand || currentCommand instanceof FilterCommand) {
-                ((CommandParam) currentCommand).setParams(line.substring(line.indexOf(" ") + 1));
+                ((ParametrizedCommand) currentCommand).setParams(line.substring(line.indexOf(" ") + 1));
                 if (currentCommand instanceof LoadCommand) {
                     data = new Data(((LoadCommand) currentCommand).getContent());
                 }

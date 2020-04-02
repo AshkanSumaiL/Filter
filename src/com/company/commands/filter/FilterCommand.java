@@ -1,8 +1,8 @@
 package com.company.commands.filter;
 
-import com.company.commands.Interface.CommandParam;
+import com.company.commands.Interface.ParametrizedCommand;
 
-public class FilterCommand extends CommandParam {
+public class FilterCommand extends ParametrizedCommand {
     protected Data data;
     protected String filterParam;
 
