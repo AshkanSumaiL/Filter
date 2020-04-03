@@ -1,12 +1,7 @@
 package com.company.commands;
 
+import com.company.Constants;
 import com.company.commands.Interface.Command;
-import com.company.commands.filter.FilterAndCommand;
-import com.company.commands.filter.FilterCommand;
-import com.company.commands.filter.FilterOrCommand;
-import com.company.commands.load.LoadCommand;
-import com.company.commands.other.ExitCommand;
-import com.company.commands.other.HelpCommand;
 
 import java.util.ArrayList;
 import java.util.List;

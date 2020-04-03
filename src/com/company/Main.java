@@ -3,10 +3,10 @@ package com.company;
 import com.company.commands.CommandList;
 import com.company.commands.Interface.Command;
 import com.company.commands.Interface.ParametrizedCommand;
-import com.company.commands.filter.Data;
-import com.company.commands.filter.FilterCommand;
-import com.company.commands.load.LoadCommand;
-import com.company.commands.other.HelpCommand;
+import com.company.dataStructures.Data;
+import com.company.commands.FilterCommand;
+import com.company.commands.LoadCommand;
+import com.company.commands.HelpCommand;
 
 import java.io.BufferedReader;
 import java.io.IOException;
