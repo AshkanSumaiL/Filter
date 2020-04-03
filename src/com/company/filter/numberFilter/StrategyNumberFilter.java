@@ -3,11 +3,8 @@ package com.company.filter.numberFilter;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public interface StrategyNumberFilter {
-    public List<Integer> execute(List<Integer> elements);
-}
 
-class FilterEven implements StrategyNumberFilter {
+class FilterEven implements IStrategyNumberFilter{
     @Override
     public List<Integer> execute(List<Integer> elements) {
         return elements.stream()
@@ -16,7 +13,7 @@ class FilterEven implements StrategyNumberFilter {
     }
 }
 
-class FilterOdd implements StrategyNumberFilter {
+class FilterOdd implements IStrategyNumberFilter {
     @Override
     public List<Integer> execute(List<Integer> elements) {
         return elements.stream()
@@ -25,7 +22,7 @@ class FilterOdd implements StrategyNumberFilter {
     }
 }
 
-class FilterPrime implements StrategyNumberFilter {
+class FilterPrime implements IStrategyNumberFilter {
     @Override
     public List<Integer> execute(List<Integer> elements) {
         return elements.stream()
@@ -34,7 +31,7 @@ class FilterPrime implements StrategyNumberFilter {
     }
 }
 
-class FilterNumberPalindrome implements StrategyNumberFilter {
+class FilterNumberPalindrome implements IStrategyNumberFilter {
     @Override
     public List<Integer> execute(List<Integer> elements) {
         return elements.stream()
@@ -44,7 +41,7 @@ class FilterNumberPalindrome implements StrategyNumberFilter {
 
 }
 
-class FilterMultipleOf7 implements StrategyNumberFilter {
+class FilterMultipleOf7 implements IStrategyNumberFilter {
     @Override
     public List<Integer> execute(List<Integer> elements) {
         return elements.stream()
@@ -53,7 +50,7 @@ class FilterMultipleOf7 implements StrategyNumberFilter {
     }
 }
 
-class FilterMultipleOf11 implements StrategyNumberFilter {
+class FilterMultipleOf11 implements IStrategyNumberFilter {
     @Override
     public List<Integer> execute(List<Integer> elements) {
         return elements.stream()

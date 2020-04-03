@@ -4,11 +4,8 @@ package com.company.filter.wordFilter;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public interface StrategyWordFilter {
-    public List<String> execute(List<String> elements);
-}
 
-class FilterWordPalindrome implements StrategyWordFilter{
+class FilterWordPalindrome implements IStrategyWordFilter{
     public List<String> execute(List<String> words) {
         return words.stream()
                 .filter(FilterAlgorithms::isPalindrome)
@@ -16,7 +13,7 @@ class FilterWordPalindrome implements StrategyWordFilter{
     }
 
 }
-class FilterAllVowels implements StrategyWordFilter{
+class FilterAllVowels implements IStrategyWordFilter{
     public List<String> execute(List<String> words) {
         return words.stream()
                 .filter(FilterAlgorithms::hasAllVowels)
@@ -25,7 +22,7 @@ class FilterAllVowels implements StrategyWordFilter{
 
 }
 
-class FilterDiphthong implements StrategyWordFilter{
+class FilterDiphthong implements IStrategyWordFilter{
     public List<String> execute(List<String> words) {
         return words.stream()
                 .filter(FilterAlgorithms::isDiphthong)
@@ -33,7 +30,7 @@ class FilterDiphthong implements StrategyWordFilter{
     }
 }
 
-class FilterTriphthong implements StrategyWordFilter{
+class FilterTriphthong implements IStrategyWordFilter{
     public List<String> execute(List<String> words) {
         return words.stream()
                 .filter(FilterAlgorithms::isTriphthong)
