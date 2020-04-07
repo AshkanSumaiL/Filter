@@ -9,6 +9,7 @@ public class FilterOrCommand extends FilterCommand {
 
     @Override
     public void execute() {
+        super.execute();
         System.out.println(Filterer.filterOr(data, filterParam));
     }
 }

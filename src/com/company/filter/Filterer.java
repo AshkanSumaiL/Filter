@@ -1,11 +1,13 @@
 package com.company.filter;
 
 import com.company.dataStructures.Data;
+
+import com.company.filter.logicOperation.strategies.AndOperation;
+import com.company.filter.logicOperation.strategies.OrOperation;
 import com.company.filter.numberFilter.NumberFilterSelector;
 import com.company.filter.wordFilter.WordFilterSelector;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public final class Filterer {
@@ -22,27 +24,13 @@ public final class Filterer {
     }
 
     public static List<?> filterAnd(Data data, String filterParam) {
-        List<String> paramsList = new ArrayList<>(Arrays.asList(filterParam.split(" ")));
-        Data aux = new Data(data);
-        for (String filter : paramsList) {
-            aux.setInfo(filter(aux, filter));
-        }
-        return aux.getInfo();
+        AndOperation andOperation = new AndOperation();
+        return andOperation.execute(data,filterParam);
     }
 
     public static List<?> filterOr(Data data, String filterParam) {
-        List<String> paramsList = new ArrayList<>(Arrays.asList(filterParam.split(" ")));
-        List<?> temp;
-        List<String> result = new ArrayList<>();
-        for (String filter : paramsList) {
-            temp = filter(data, filter);
-            for (Object num : temp) {
-                if (!result.contains(num)) {
-                    result.add((String) num);
-                }
-            }
-        }
-        return result;
+        OrOperation orOperation = new OrOperation();
+        return orOperation.execute(data,filterParam);
     }
 
 }
